@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+motor
+pydantic
+python-dotenv
+google-cloud-speech
+google-cloud-language
+load_dotenv
