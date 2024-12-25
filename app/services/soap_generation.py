@@ -1,5 +1,9 @@
 from google.cloud import language_v1
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 def analyze_text_with_google_nlp(text):
     """
@@ -29,7 +33,7 @@ def generate_soap(transcript):
     """
     Generate SOAP notes from a transcript using Google NLP.
     """
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "google-key.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
     subjective = []
     objective = []
     assessment = []
